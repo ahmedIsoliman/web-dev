@@ -1,0 +1,1672 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+$primary-color: #292f3b;
+$font-color: white;
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+.over-lay {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.over-lay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+//start header
+header {
+  background-color: $primary-color;
+  .frist-upper-nav {
+    color: #e2e3e5;
+    font-size: 14px;
+    .upper-nav {
+      display: flex;
+      justify-content: space-between;
+      .upper-nav--left {
+        display: flex;
+        flex-direction: column;
+        a {
+          text-decoration: none;
+          color: white;
+          display: block;
+        }
+        .phone-icon,
+        .contact-icon {
+          display: flex;
+          align-items: baseline;
+        }
+      }
+      .upper-nav--right {
+        .form-select {
+          background-color: $primary-color;
+          color: white;
+          padding: 0.25rem;
+          border: none;
+        }
+        .form-select:hover {
+          border: none;
+        }
+        .sign-in {
+          display: none;
+        }
+        .social-icons {
+          display: none;
+        }
+        .btn-secondary {
+          background-color: transparent;
+          border: none;
+        }
+        .dropdown-menu {
+          background-color: $primary-color;
+          color: white;
+          a {
+            color: white;
+          }
+          a:hover {
+            background-color: #007bff;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+
+  .header-nav {
+    .header-nav--menu {
+      .logo {
+        font-weight: 500;
+      }
+      button {
+        span {
+          font-size: 15px;
+        }
+      }
+      .drop-down-nav {
+        .drop-down-nav-menu {
+          li {
+            padding-bottom: 0.25rem;
+            text-align: center;
+          }
+          .search {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.header-nav.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  background-color: $primary-color;
+  transition: all 0.1s;
+}
+//end header
+
+//start main
+main {
+  //start first section (landing section)
+  .landing {
+    position: relative;
+    background-image: url(./images/header3.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 50vmax;
+    width: 100%;
+    .landing-section {
+      color: white;
+      font-weight: 800;
+      height: 50vmax;
+      .landing-texts {
+        position: absolute;
+        top: 44%;
+        h1 {
+          font-size: 24px;
+          margin: 0;
+        }
+        p {
+          font-size: 12px;
+          width: 80%;
+          line-height: 1.2;
+          font-weight: normal;
+        }
+        button {
+          border-radius: 15rem;
+          font-size: 13px;
+        }
+      }
+      .landing-person {
+        display: none;
+      }
+    }
+  }
+  .landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+  //end first section (landing section)
+
+  //start second section (coaching-scheduled)
+  .coaching-scheduled {
+    text-align: center;
+    .coaching-scheduled--block {
+      div {
+        box-shadow: 1px 1px 12px 2px #eee;
+        margin-bottom: 1rem;
+        h2 {
+          font-size: 21px;
+        }
+        i {
+          color: #007bff;
+          font-size: 22px;
+        }
+        p {
+          line-height: 1.5;
+          font-weight: 400;
+          color: rgb(168, 166, 166);
+          font-size: 15px;
+        }
+        button {
+          border-radius: 15rem;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  //end second section (coaching-scheduled)
+
+  //start third section (coaching-work)
+  .coaching-work {
+    .coaching-work-header {
+      position: relative;
+      text-align: center;
+      h2 {
+        font-size: 25px;
+        font-weight: 600;
+      }
+      .header-border {
+        position: absolute;
+        border-bottom: 3px solid #007bff;
+        top: 67%;
+        left: 40%;
+        width: 55px;
+      }
+    }
+    .coaching-work-details {
+      .coaching-work-info {
+        margin-top: 1.5rem;
+        .coaching-work-icon {
+          i {
+            color: #007bff;
+            font-size: 22px;
+          }
+        }
+        .coaching-work-texts {
+          h3 {
+            font-size: 17px;
+          }
+          p {
+            line-height: 1.5;
+            font-size: 13px;
+            font-weight: 400;
+            color: #a8a6a6;
+          }
+        }
+      }
+    }
+  }
+  //end third section (coaching-work)
+
+  //start fourth section (statistics)
+  .statistics {
+    position: relative;
+    background-image: url(images/header3.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    .statistics-numbers {
+      text-align: center;
+      color: white;
+      padding-top: 1.2rem;
+      h3 {
+        font-size: 29px;
+        color: #007bff;
+        font-weight: 800;
+      }
+      p {
+        font-size: 15px;
+        font-weight: 400;
+      }
+    }
+  }
+  .statistics::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  //end fourth section (statistics)
+
+  //start fifth section (events)
+  .events {
+    .events-header {
+      h2 {
+        font-size: 28px;
+      }
+      .header-border {
+        position: absolute;
+        border-bottom: 3px solid #007bff;
+        top: 67%;
+        left: 40%;
+        width: 55px;
+      }
+    }
+    .events-blogs {
+      .events-blogs-main {
+        > div {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .events-blogs-main-child {
+          border: 1px solid #eee;
+          margin-bottom: 1rem;
+          img {
+            padding-top: 0.5rem;
+          }
+          p {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgb(136, 136, 136);
+            span {
+              color: #007bff;
+            }
+          }
+        }
+        p:last-child {
+          color: rgb(197, 197, 197);
+        }
+      }
+      .events-blogs-secnd {
+        > div {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        .events-blogs-secnd-child {
+          border: 1px solid #eee;
+          margin-bottom: 1rem;
+
+          > div {
+            h3 {
+              font-size: 27px;
+              color: #007bff;
+            }
+            p {
+              font-size: 15px;
+              color: #007bff;
+              font-weight: 500;
+            }
+          }
+          h4 {
+            font-size: 13px;
+            font-weight: 700;
+          }
+          .details {
+            font-size: 10px;
+            font-weight: 400;
+            color: #888888;
+            margin-bottom: 0.3rem;
+          }
+          .view-details {
+            padding-top: 0.5rem;
+            p {
+              font-size: 12px;
+              color: rgb(177, 177, 177);
+            }
+          }
+        }
+      }
+    }
+  }
+  //end fifth section (events)
+
+  //start six section (online-coaching)
+  .online-coaching::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .online-coaching {
+    position: relative;
+    background-image: url(./images/header2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    padding-top: 1.5rem;
+
+    .online-coaching-cards {
+      .online-coaching-cards-header {
+        h2 {
+          color: white;
+          font-size: 28px;
+        }
+        .header-border {
+          position: absolute;
+          border-bottom: 3px solid #007bff;
+          left: 40%;
+          width: 55px;
+        }
+      }
+      .card {
+        .card-body {
+          text-align: center;
+          padding-bottom: 0;
+          img {
+            width: 40%;
+            height: 50%;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+          }
+          h5 {
+            color: #ababab;
+            font-size: 17px;
+          }
+          p {
+            font-size: 17px;
+            font-weight: 500;
+            line-height: 1.4;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .card-details {
+            position: relative;
+            padding-top: 1.5rem;
+            .free {
+              text-align: left;
+              p {
+                font-weight: 500;
+                color: #1fbb1f;
+                margin-left: 0;
+              }
+            }
+            .comments {
+              div {
+                i {
+                  color: #797878;
+                }
+              }
+            }
+          }
+          .card-details::before {
+            content: "";
+            position: absolute;
+            border-top: 1px solid #d6d4d4;
+            top: 0;
+            left: 0;
+            width: 100%;
+          }
+        }
+      }
+      .view-all-button {
+        text-align: center;
+        margin-top: 1.5rem;
+        button {
+          border-radius: 15rem;
+          font-size: 14px;
+          padding-right: 1rem;
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+
+  //end six section (online-coaching)
+  //start seven section (our team)
+  .our-team {
+    text-align: center;
+    .our-team-header {
+      position: relative;
+      h2 {
+        font-size: 28px;
+      }
+      .header-border {
+        position: absolute;
+        border-bottom: 3px solid #007bff;
+        left: 40%;
+        width: 55px;
+      }
+    }
+    .our-team-person {
+      padding-top: 2rem;
+      div {
+        height: 20%;
+        img {
+          width: 50%;
+          height: 50%;
+          border-radius: 50%;
+          margin-bottom: 0.5rem;
+        }
+        h3 {
+          font-size: 19px;
+        }
+        p {
+          font-size: 13px;
+          font-weight: 500;
+          color: #ada9a9;
+        }
+      }
+    }
+  }
+  //end seven section ( our team)
+  //start eight section ( video and gallery)
+  .video-gallery::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .video-gallery {
+    position: relative;
+    background-image: url(./images/header3.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    color: white;
+    .video-gallery-header {
+      h2 {
+        font-size: 28px;
+        padding-top: 1rem;
+      }
+
+      .header-border {
+        position: absolute;
+        border-bottom: 3px solid #007bff;
+        width: 55px;
+      }
+    }
+    button {
+      border-radius: 15rem;
+      margin-top: 1rem;
+    }
+
+    .vidoe-gallery-media {
+      .video-container {
+        margin-top: 1.5rem;
+      }
+      .gallery-container {
+        width: 100%;
+        .gallery-container-images {
+          > div {
+            margin-top: 1rem;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  //end eight section (video and gallery)
+  //start nine section (success)
+  .success {
+    .success-header {
+      text-align: center;
+      h2 {
+        font-size: 25px;
+        font-weight: 600;
+      }
+      .header-border {
+        position: absolute;
+        border-bottom: 3px solid #007bff;
+        left: 40%;
+        width: 55px;
+      }
+    }
+    .success-stories {
+      .success-stories-details {
+        text-align: center;
+        > div {
+          height: 20%;
+          img {
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            margin-bottom: 0.75rem;
+            margin-top: 2rem;
+          }
+          h5 {
+            font-weight: 800;
+            font-size: 18px;
+            color: #007bff;
+          }
+          p {
+            font-size: 13px;
+            line-height: 1.3;
+            font-weight: 400;
+            width: 80%;
+            margin: auto;
+            margin-bottom: 0.5rem;
+          }
+          h6 {
+            margin-bottom: 0.1rem;
+            font-size: 17px;
+          }
+          p {
+            small {
+              font-size: 10px;
+              color: #a5a1a1;
+            }
+          }
+        }
+      }
+    }
+  }
+  //end nine section (success)
+  .break-line {
+    border-bottom: 1px solid #c3c0c0;
+  }
+  //start section ten (subscribe)
+  .subscribe {
+    padding-top: 2.5rem;
+    .subscribe-header {
+      text-align: center;
+      h2 {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
+      }
+    }
+    .subscribe-details {
+      text-align: center;
+      p {
+        font-size: 13px;
+        line-height: 1.3;
+        font-weight: 400;
+        width: 95%;
+        margin: auto;
+        margin-bottom: 1.5rem;
+        color: #a5a1a1;
+      }
+    }
+    .subscribe-form {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+
+      input {
+        border-bottom-left-radius: 1.5rem;
+        border-top-left-radius: 1.5rem;
+        font-size: 14px;
+      }
+      button {
+        font-size: 14px;
+        border-bottom-right-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+      }
+    }
+  }
+  //end section ten (subscribe)
+
+  //end main
+}
+
+//start footer
+footer {
+  background-color: $primary-color;
+  color: white;
+  .footer-heading {
+    margin-bottom: 1.5rem;
+    h3 {
+      margin-bottom: 1.5rem;
+      font-size: 32px;
+    }
+    p {
+      font-size: 13px;
+      color: #b4b3b3;
+    }
+    a {
+      text-decoration: none;
+      color: #b4b3b3;
+    }
+
+    .footer-social-icons {
+      i {
+        background-color: #464a51;
+        padding: 0.75rem;
+        font-size: 13px;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+      }
+      i:hover {
+        background-color: #007bff;
+      }
+    }
+  }
+  .footer-featured,
+  .footer-categories,
+  .footer-links,
+  .footer-links-two {
+    margin-bottom: 1rem;
+    h6 {
+      color: #ecebeb;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      a {
+        text-decoration: none;
+        color: #b4b3b3;
+      }
+    }
+  }
+  .footer-last-section {
+    background-color: #111111;
+    color: #939393;
+    .footer-last-section-child {
+      > div P:first-child {
+        font-size: 13px;
+        font-weight: 500;
+        padding-top: 0.5rem;
+        margin-bottom: 0.25rem;
+      }
+      p::selection {
+        background-color: red;
+        color: black;
+      }
+    }
+  }
+}
+//end footer
+
+//start form design
+.contact-details {
+  z-index: 100;
+  position: absolute;
+  top: 855vh;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: white;
+  transition: 500ms ease-in-out;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 0.75rem;
+
+  .contact-details-block {
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 0.75rem;
+    box-shadow: 0px 1px 4px 0px grey;
+    padding: 1rem;
+    .form-header {
+      border-bottom: 1px solid rgb(187, 187, 187);
+      h2 {
+        color: #007bff;
+        font-size: 25px;
+        margin-bottom: 1rem;
+      }
+      button {
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        color: gray;
+        cursor: pointer;
+      }
+    }
+    .form-details {
+      margin-top: 1.5rem;
+      label {
+        font-size: 16px;
+        margin-bottom: 0.25rem;
+        font-weight: 500;
+      }
+      input {
+        font-size: 14px;
+      }
+      .phone-number {
+        .phone-number-flag {
+          padding-right: 0;
+        }
+        .phone-number-calls {
+          padding-left: 0;
+        }
+      }
+      .person .form-control {
+        padding-left: 2rem;
+      }
+      .person .form-feedback {
+        position: absolute;
+        z-index: 2;
+        display: block;
+        width: 2.375rem;
+        height: 2.375rem;
+        line-height: 2.375rem;
+        text-align: center;
+        pointer-events: none;
+        color: #aaa;
+      }
+      .phone-code {
+        font-size: 14px;
+      }
+    }
+  }
+}
+.contact-details.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+//end form design
+
+//responsive screen
+
+//tablet screen
+@media only screen and (min-width: 768px) {
+  header {
+    .frist-upper-nav {
+      .upper-nav {
+        padding: 0;
+        .upper-nav--left {
+          flex-direction: row;
+          .phone-icon {
+            border-right: 1px solid #ffffff6b;
+          }
+          .contact-icon {
+            padding-left: 0.5rem;
+          }
+        }
+        .upper-nav--right {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          .social-icons {
+            display: block;
+          }
+          .social-icons::before {
+            content: "";
+            border-left: 1px solid #ffffff6b;
+            margin-right: 0.6rem;
+            margin-left: 0.6rem;
+          }
+          i:not(:last-child) {
+            margin-right: 1rem;
+          }
+        }
+      }
+    }
+    .header-nav {
+      .header-nav--menu {
+        .logo {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  //start main content
+  main {
+    .landing {
+      .landing-section {
+        color: white;
+        font-weight: 800;
+        .landing-texts {
+          top: 50%;
+          h1 {
+            font-size: 32px;
+            margin: 0;
+          }
+          p {
+            font-size: 15px;
+            line-height: 1.3;
+            width: 82%;
+            font-weight: normal;
+          }
+        }
+        .landing-person {
+          display: block;
+          z-index: 100;
+          left: 59%;
+          top: 17%;
+          height: 83%;
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .coaching-scheduled {
+      .coaching-scheduled--block {
+        display: flex;
+        flex-direction: row;
+
+        div {
+          box-shadow: 1px 1px 20px 2px #eee;
+          margin-right: 1rem;
+          h2 {
+            font-size: 15px;
+          }
+          i {
+            color: #007bff;
+            font-size: 22px;
+          }
+          p {
+            font-size: 12px;
+          }
+          button {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+    .coaching-work {
+      .coaching-work-header {
+        h2 {
+          font-size: 30px;
+        }
+        .header-border {
+          left: 46%;
+        }
+      }
+      .coaching-work-details {
+        .coaching-work-info {
+          margin-top: 0;
+        }
+      }
+    }
+    .statistics {
+      height: 108px !important;
+      .statistics-numbers {
+        h3 {
+          font-size: 30px;
+        }
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+    .events {
+      .events-header {
+        h2 {
+          font-size: 30px;
+        }
+        .header-border {
+          left: 46%;
+        }
+      }
+      .events-blogs {
+        .events-blogs-main {
+          .events-blogs-main-child {
+            > div > div {
+              padding-left: 0;
+            }
+            img {
+              padding-top: 0;
+            }
+            h3 {
+              font-size: 13px;
+            }
+            p {
+              font-size: 10px;
+              line-height: 1.2;
+            }
+            p:last-child {
+              font-size: 11px;
+            }
+          }
+        }
+        .events-blogs-secnd {
+          .events-blogs-secnd-child {
+            > div {
+              padding: 0.25rem;
+            }
+            h4 {
+              font-size: 12px;
+            }
+            .details {
+              font-size: 9px;
+              font-weight: 600;
+              color: #888888;
+              margin-bottom: 0.3rem;
+            }
+            .view-details {
+              p {
+                font-size: 11px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .online-coaching {
+      .online-coaching-cards {
+        .online-coaching-cards-header {
+          h2 {
+            font-size: 30px;
+          }
+          .header-border {
+            left: 47%;
+          }
+        }
+      }
+    }
+
+    .our-team {
+      .our-team-header {
+        h2 {
+          font-size: 30px;
+        }
+        .header-border {
+          left: 47%;
+        }
+      }
+      .our-team-person {
+        padding-top: 2rem;
+        div {
+          height: 25%;
+          img {
+            width: 60%;
+            height: 50%;
+            border-radius: 50%;
+            margin-bottom: 0.5rem;
+          }
+          h3 {
+            font-size: 15px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    //
+
+    .video-gallery {
+      padding: 1rem;
+      .video-gallery-header {
+        h2 {
+          font-size: 30px;
+          padding-top: 1rem;
+        }
+      }
+
+      .vidoe-gallery-media {
+        margin-top: 1rem;
+        .video-container {
+          margin-top: 1rem;
+        }
+        .gallery-container {
+          .gallery-container-images {
+            > div {
+              padding-right: 0.5rem;
+              padding-left: 0.5rem;
+              img {
+                height: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .success {
+      .success-header {
+        h2 {
+          font-size: 30px;
+        }
+        .header-border {
+          left: 48%;
+        }
+      }
+      .success-stories {
+        margin-top: 2rem;
+        .success-stories-details {
+          text-align: left;
+          > div {
+            height: 25%;
+            img {
+              margin-top: 0.5rem;
+              width: 100%;
+            }
+            h5 {
+              font-size: 14px;
+            }
+            p {
+              font-size: 12px;
+              line-height: 1.4;
+              width: 100%;
+            }
+            h6 {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+    .subscribe {
+      .subscribe-header {
+        h2 {
+          font-size: 30px;
+        }
+      }
+      .subscribe-details {
+        p {
+          width: 62%;
+        }
+      }
+      .subscribe-form {
+        width: 65%;
+        input,
+        button {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  //end main content
+  //form-details
+  .contact-details {
+    position: fixed;
+    top: 50%;
+    width: 70%;
+    margin: auto;
+    .contact-details-block {
+      .form-details {
+        margin-top: 1.5rem;
+        label {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  header {
+    .frist-upper-nav {
+      padding-bottom: 0.5rem;
+      .upper-nav {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        .upper-nav--left {
+          .contact-icon {
+            padding-left: 1rem !important;
+          }
+        }
+        .upper-nav--right {
+          .sign-in {
+            display: block;
+            padding-right: 0.5rem !important;
+            select {
+              padding: 0;
+            }
+          }
+          .sign-in::before {
+            content: "";
+            border-left: 1px solid #ffffff6b;
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
+    .header-nav {
+      border-top: 1px solid #3f444f;
+      padding: 1rem 0;
+      .header-nav--menu {
+        .logo {
+          font-size: 25px;
+        }
+        .drop-down-nav {
+          justify-content: flex-end;
+          .drop-down-nav-menu {
+            align-items: center;
+            li:not(:last-child) {
+              align-self: start;
+              margin-left: 1rem;
+            }
+            a {
+              font-size: 13px;
+              font-weight: 400;
+              color: white;
+            }
+            a.active {
+              border-bottom: 2px solid #2582eb;
+            }
+            a:hover {
+              border-bottom: 2px solid #2582eb;
+            }
+            .sign {
+              display: none;
+            }
+            .search {
+              display: block;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  //start main content
+  main {
+    .landing {
+      .landing-section {
+        .landing-texts {
+          h1 {
+            font-size: 44px;
+            margin: 0;
+          }
+          p {
+            font-size: 20px;
+            line-height: 1.4;
+            width: 90%;
+          }
+          button {
+            border-radius: 15rem;
+            font-size: 18px;
+          }
+        }
+        .landing-person {
+          position: absolute;
+          display: block;
+          z-index: 100;
+          left: 58%;
+          top: 17%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .coaching-work {
+      .coaching-work-header {
+        h2 {
+          font-size: 30px;
+        }
+        .header-border {
+          left: 49%;
+        }
+      }
+    }
+    .statistics {
+      height: 90px !important;
+      .statistics-numbers {
+        h3 {
+          font-size: 38px;
+        }
+        p {
+          font-size: 17px;
+        }
+        .statistics-numbers-child {
+          div {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .events {
+      .events-header {
+        h2 {
+          font-size: 30px;
+        }
+      }
+      .events-blogs {
+        .events-blogs-main {
+          .events-blogs-main-child {
+            margin-bottom: 1.2rem;
+            h3 {
+              font-size: 18px;
+            }
+            p {
+              line-height: 1.4;
+              font-size: 12px;
+            }
+            p:last-child {
+              font-size: 11px;
+            }
+          }
+        }
+        .events-blogs-secnd {
+          .events-blogs-secnd-child {
+            > div {
+              padding: 0.4rem;
+            }
+            h4 {
+              font-size: 14px;
+            }
+            .details {
+              font-size: 14px;
+              font-weight: 600;
+              color: #888888;
+              margin-bottom: 0.3rem;
+            }
+            .view-details {
+              p {
+                font-size: 13px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .our-team {
+      .our-team-header {
+        h2 {
+          font-size: 30px;
+        }
+      }
+      .our-team-person {
+        div {
+          h3 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .success {
+      .success-header {
+        h2 {
+          font-size: 30px;
+        }
+      }
+      .success-stories {
+        margin-top: 2.5rem;
+        .success-stories-details {
+          > div {
+            img {
+              margin-top: 0.5rem;
+              width: 90%;
+            }
+            h5 {
+              font-size: 17px;
+            }
+            p {
+              font-size: 14px;
+              line-height: 1.5;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .subscribe {
+      .subscribe-header {
+        h2 {
+          font-size: 30px;
+        }
+      }
+      .subscribe-details {
+        p {
+          width: 63%;
+          line-height: 1.3;
+
+          font-size: 14px;
+        }
+      }
+      .subscribe-form {
+        width: 50%;
+        input,
+        button {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  //start footer
+  footer {
+    .footer-heading {
+      h3 {
+        margin-bottom: 1rem;
+        font-size: 35px;
+      }
+      a {
+        text-decoration: none;
+        color: #b4b3b3;
+      }
+    }
+    .footer-featured,
+    .footer-categories,
+    .footer-links,
+    .footer-links-two {
+      padding-top: 1.5rem;
+      h6 {
+        font-size: 13px;
+        font-weight: 600;
+      }
+      p {
+        a {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+    .footer-links-two {
+      padding-top: 4rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header {
+    .header-nav {
+      .header-nav--menu {
+        .drop-down-nav {
+          .drop-down-nav-menu {
+            li:not(:last-child) {
+              align-self: start;
+              margin-left: 2rem;
+            }
+            a {
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+  main {
+    .landing {
+      .landing-section {
+        .landing-texts {
+          // top: 45%;
+          h1 {
+            font-size: 58px;
+            margin: 0;
+          }
+          p {
+            font-size: 24px;
+            line-height: 1.3;
+            width: 79%;
+            font-weight: normal;
+          }
+          button {
+            border-radius: 15rem;
+            font-size: 23px;
+          }
+        }
+        .landing-person {
+          left: 57%;
+          top: 17%;
+        }
+      }
+    }
+    .coaching-scheduled {
+      .coaching-scheduled--block {
+        display: flex;
+        flex-direction: row;
+        div {
+          margin-right: 1rem;
+          h2 {
+            font-size: 26px;
+          }
+          i {
+            color: #007bff;
+            font-size: 23px;
+          }
+          p {
+            font-size: 18px;
+            width: 80%;
+            margin: auto auto 1rem auto;
+            line-height: 1.5;
+            font-weight: 400;
+            color: rgb(168, 166, 166);
+          }
+          button {
+            font-size: 17px;
+            border-radius: 15rem;
+          }
+        }
+      }
+    }
+    .coaching-work {
+      .coaching-work-header {
+        h2 {
+          font-size: 30px;
+        }
+        .header-border {
+          left: 49%;
+        }
+      }
+      .coaching-work-details {
+        .coaching-work-info {
+          .coaching-work-texts {
+            h3 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .statistics {
+      height: 90px !important;
+      .statistics-numbers {
+        h3 {
+          font-size: 39px;
+        }
+        p {
+          font-size: 19px;
+        }
+        .statistics-numbers-child {
+          div {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+          }
+        }
+      }
+    }
+    .events {
+      .events-blogs {
+        .events-blogs-main {
+          .events-blogs-main-child {
+            img {
+              height: 150px;
+            }
+            h3 {
+              font-size: 20px;
+            }
+            p {
+              line-height: 1.4;
+              font-size: 14px;
+            }
+            p:last-child {
+              font-size: 13px;
+            }
+          }
+        }
+        .events-blogs-secnd {
+          .events-blogs-secnd-child {
+            h4 {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+
+    .our-team {
+      .our-team-header {
+        h2 {
+          font-size: 30px;
+        }
+      }
+      .our-team-person {
+        div {
+          h3 {
+            font-size: 19px;
+          }
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .success {
+      .success-stories {
+        margin-top: 3rem;
+        .success-stories-details {
+          > div {
+            img {
+              margin-top: 0.5rem;
+              width: 95%;
+            }
+            h5 {
+              font-size: 20px;
+            }
+            p {
+              font-size: 17px;
+              line-height: 1.5;
+              width: 100%;
+              margin-bottom: 1rem;
+            }
+            h6 {
+              font-size: 18px;
+            }
+            p {
+              small {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //form-details
+
+  .contact-details {
+    width: 100%;
+    margin: auto;
+    .contact-details-block {
+      .form-header {
+        h2 {
+          font-size: 30px;
+        }
+      }
+      .form-details {
+        margin-top: 1.5rem;
+        label {
+          font-size: 19px;
+        }
+        input {
+          font-size: 20px;
+          padding-top: 0.75rem;
+        }
+
+        select {
+          font-size: 21px;
+        }
+        .person {
+          .form-feedback {
+            font-size: 18px;
+            padding-top: 0.4rem;
+          }
+        }
+        .phone-code {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  main {
+    .landing {
+      .landing-section {
+        .landing-texts {
+          h1 {
+            font-size: 60px;
+          }
+          p {
+            font-size: 25px;
+            width: 67%;
+          }
+          button {
+            font-size: 26px;
+          }
+        }
+        .landing-person {
+          left: 53%;
+          top: 19%;
+          height: 81%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  main {
+    .landing {
+      .landing-section {
+        .landing-texts {
+          h1 {
+            font-size: 58px;
+          }
+          p {
+            font-size: 24px;
+            width: 63%;
+          }
+          button {
+            font-size: 22px;
+          }
+        }
+        .landing-person {
+          left: 53%;
+          top: 19%;
+        }
+      }
+    }
+  }
+}
